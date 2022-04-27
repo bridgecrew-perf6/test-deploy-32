@@ -20,5 +20,5 @@ jobs:
           email: eddybrown@me.com
           api_key: ${{ secrets.HEROKU_PUSH_API_KEY }}
           app_names: |
-            test-deploy-dev-228
-            test-deploy-prod-300
+            test-app-dev-123
+            test-app-prod-123

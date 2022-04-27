@@ -22,3 +22,4 @@ jobs:
           app_names: |
             test-app-dev-123
             test-app-prod-123
+          debug: true

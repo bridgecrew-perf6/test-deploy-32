@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Push code
-        uses: yunojuno/heroku-git-push@usability-improvements
+        uses: yunojuno/heroku-git-push@improve-logging
         with:
           email: eddybrown@me.com
           api_key: ${{ secrets.HEROKU_PUSH_API_KEY }}

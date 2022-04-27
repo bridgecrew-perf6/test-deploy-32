@@ -21,4 +21,4 @@ jobs:
           api_key: ${{ secrets.HEROKU_PUSH_API_KEY }}
           app_names: |
             test-deploy-dev-228
-            test-deploy-uat-300
+            test-deploy-prod-300

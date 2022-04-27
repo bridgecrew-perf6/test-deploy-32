@@ -1,0 +1,24 @@
+name: Heroku push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  heroku_git_push:
+    runs-on: ubuntu-latest
+    name: Push code to Heroku
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Push code
+        uses: yunojuno/heroku-git-push@usability-improvements
+        with:
+          email: ${{ secrets.HEROKU_PUSH_EMAIL }}
+          api_key: ${{ secrets.HEROKU_PUSH_API_KEY }}
+          app_names: |
+            ${{ env.HEROKU_PUSH_DEV_APP_NAME }}
+            ${{ env.HEROKU_PUSH_PROD_APP_NAME }}

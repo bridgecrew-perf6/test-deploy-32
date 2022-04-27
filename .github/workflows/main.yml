@@ -7,6 +7,8 @@ on:
 
 jobs:
   heroku_git_push:
+    secrets:
+      api_key: ${{ secrets.HEROKU_PUSH_API_KEY }}
     runs-on: ubuntu-latest
     name: Push code to Heroku
     steps:
